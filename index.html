@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제주AI ON 협동조합 | 강의 예약</title>
+
+    <!-- 같은 폴더에 style.css가 있어야 합니다 -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="brand">
+        <!-- 로고 경로: ./images/logo.png -->
+        <img class="logo" src="스크린샷 2025-12-26 215035.png" alt="제주AI ON 협동조합 로고" />
+        <div class="brand-text">
+          <h1>제주AI ON 협동조합</h1>
+          <p class="tagline">디지털 문맹을 줄일 차례다.</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- 소개 -->
+      <section class="section intro">
+        <h2>강의 예약</h2>
+        <p>
+          제주AI ON 협동조합의 교육 프로그램을 확인하고,
+          원하는 일정으로 강의 신청을 할 수 있습니다.
+        </p>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>📍 운영 지역</h3>
+            <p>제주 전역 (기관/학교/단체 출강 가능)</p>
+          </div>
+          <div class="info-card">
+            <h3>🕐 운영 방식</h3>
+            <p>오프라인 / 온라인 / 혼합</p>
+          </div>
+          <div class="info-card">
+            <h3>☎️ 문의</h3>
+            <p>담당자: (여기에 입력)</p>
+            <p>연락처: (여기에 입력)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 강의 목록 -->
+      <section class="section lectures">
+        <h2>강의 프로그램</h2>
+
+        <div class="lecture-grid">
+          <article class="lecture-card">
+            <h3>AI로 완성하는 자기주도학습</h3>
+            <p class="meta">대상: 중학생 / 진행: 오프라인</p>
+            <p class="desc">
+              AI 도구를 활용해 스스로 학습 계획을 세우고, 공부 루틴을 만드는 실습형 프로그램입니다.
+            </p>
+          </article>
+
+          <article class="lecture-card">
+            <h3>시니어 스마트폰 디지털 리터러시</h3>
+            <p class="meta">대상: 중장년·노년층 / 진행: 오프라인</p>
+            <p class="desc">
+              스마트폰 필수 기능부터 실생활 활용(앱, 사진, 간편결제 등)까지 단계별로 안내합니다.
+            </p>
+          </article>
+
+          <article class="lecture-card">
+            <h3>소상공인을 위한 AI 시스템 설계</h3>
+            <p class="meta">대상: 소상공인 / 진행: 온라인·혼합</p>
+            <p class="desc">
+              AI를 “툴”이 아니라 “업무 시스템”으로 설계하는 방식으로, 실제 업무 흐름에 맞춰 적용합니다.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 신청 폼 -->
+      <section class="section form">
+        <h2>강의 신청하기</h2>
+
+        <form id="reservationForm">
+          <div class="field-row">
+            <label for="name">이름 <span class="req">*</span></label>
+            <input id="name" name="name" type="text" required />
+          </div>
+
+          <div class="field-row">
+            <label for="phone">연락처 <span class="req">*</span></label>
+            <input id="phone" name="phone" type="tel" placeholder="010-0000-0000" required />
+          </div>
+
+          <div class="field-row">
+            <label for="email">이메일</label>
+            <input id="email" name="email" type="email" placeholder="선택" />
+          </div>
+
+          <div class="field-row">
+            <label for="lecture">강의 선택 <span class="req">*</span></label>
+            <select id="lecture" name="lecture" required>
+              <option value="">강의를 선택하세요</option>
+              <option value="AI로 완성하는 자기주도학습">AI로 완성하는 자기주도학습</option>
+              <option value="시니어 스마트폰 디지털 리터러시">시니어 스마트폰 디지털 리터러시</option>
+              <option value="소상공인을 위한 AI 시스템 설계">소상공인을 위한 AI 시스템 설계</option>
+            </select>
+          </div>
+
+          <div class="field-row">
+            <label for="date">희망 날짜 <span class="req">*</span></label>
+            <input id="date" name="date" type="date" required />
+          </div>
+
+          <div class="field-row">
+            <label for="time">희망 시간 <span class="req">*</span></label>
+            <select id="time" name="time" required>
+              <option value="">시간을 선택하세요</option>
+              <option value="09:00">09:00</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+            </select>
+          </div>
+
+          <div class="field-row">
+            <label for="people">인원</label>
+            <input id="people" name="people" type="number" min="1" placeholder="선택" />
+          </div>
+
+          <div class="field-row">
+            <label for="message">요청사항</label>
+            <textarea id="message" name="message" rows="4" placeholder="선택"></textarea>
+          </div>
+
+          <div class="field-row checkbox">
+            <input id="consent" name="consent" type="checkbox" required />
+            <label for="consent">
+              개인정보 수집 및 이용에 동의합니다. <span class="req">*</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn">신청하기</button>
+
+          <p id="status" class="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <p>© 제주AI ON 협동조합</p>
+      </footer>
+    </main>
+
+    <!-- 같은 폴더에 script.js가 있어야 합니다 -->
+    <script src="./script.js"></script>
+  </body>
+</html>
